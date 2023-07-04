@@ -29,7 +29,7 @@ namespace Ковертор_валют
             float rubToEur = 0.0083822F;
             float currencyCount;
             string userInput;
-            bool exitFromExchange = true;
+            bool isExitFromExchange = true;
 
             Console.WriteLine("Добро пожаловать в обменник валют");
             Console.Write("Введите баланс долларов: ");
@@ -40,7 +40,7 @@ namespace Ковертор_валют
             rubValue = Convert.ToSingle(Console.ReadLine());
             Console.WriteLine("У нас вы можете обменять:");
 
-            while (exitFromExchange == true)
+            while (isExitFromExchange == true)
             {
                 Console.WriteLine(CommandBuyUsdToEur + " - доллары на евро");
                 Console.WriteLine(CommandBuyUsdToRub + " - доллары на рубли");
@@ -150,7 +150,7 @@ namespace Ковертор_валют
                         break;
 
                     case CommandExit:
-                        exitFromExchange = false;
+                        isExitFromExchange = false;
                         Console.WriteLine("Вы вышли из обменника.");
                         break;
                 }
